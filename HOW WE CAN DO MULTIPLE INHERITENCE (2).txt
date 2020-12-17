@@ -1,0 +1,20 @@
+##MULTIPLE INHERITENCE= IN THAT WE SIMPLY CAN INHERIT FROM AN INHERITED CLASS 
+class Parent:
+    def Feature(self):
+        print("I am parent")
+
+
+##IN BRACKET WE HAVE TO INHERIT CLASS
+class Child():
+    def Feature1(self):
+        print("I am chid")
+
+##HERE YOU CAN SEE WE CAN INHERIT FROM MULTIPLE CLASSES IN FOLLOWING WAY
+class Sub_Class(Parent,Child):
+    def Feature3(self):
+        print("I am featur 3")        
+
+
+
+s1 = Sub_Class()
+s1.Feature1()             

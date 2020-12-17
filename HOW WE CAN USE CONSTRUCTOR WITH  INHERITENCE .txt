@@ -1,0 +1,83 @@
+##HOW CONSTRUCTOR BEHAVES WITH single INHERITENCE 
+class Parent():
+##CONSTRUCTOR OF PARENT
+    def __init__(self):
+        print("Am Parent init")
+
+    def feature(self):
+        print(" I am parent ")
+
+class Child(Parent):
+##CONSTRUCTOR OF CHILD
+     def __init__(self):
+         
+         print("Am Child init")
+
+
+     def feature(self):
+         print("I am Child")        
+
+
+#NOW YOU CAN SEE THAT WE CREATE AN OBJECT FOR CHILD AND WHEN WE EXECUTE THAT WE GET ONLY VALUE OF CHILD CONSTRUCTOR.
+c1=Child()
+
+
+
+$#####################################################################################################################################################
+NOW WE USE (SUPER) METHOD WITH THE HLP WHICH WE CAN USE CONSTRUCTOR OF PARENT AS WELL AS CHILD CLASS AS WELL.
+
+class Parent():
+##CONSTRUCTOR OF PARENT
+    def __init__(self):
+        print("Am Parent init")
+
+    def feature(self):
+        print(" I am parent ")
+
+class Child(Parent):
+##CONSTRUCTOR OF CHILD
+     def __init__(self):
+#HERE YOU CAN SEE WE ARE USING SUPER METHOD WITH THE HELP OF WHICH WE CAN INHERIT  CONSTRUCTOR OF PARENT CLASS AND THEN CHILD CLASS         
+        super().__init__() 
+        print("Am Child init")
+         
+
+
+     def feature(self):
+         print("I am Child")        
+
+
+#NOW YOU CAN SEE THAT WE CREATE AN OBJECT FOR CHILD AND WHEN WE EXECUTE THAT WE GET ONLY VALUE OF CHILD CONSTRUCTOR.
+c1=Child()
+
+
+################################################################################################################################################################
+##HOW CONSTRUCTOR BEHAVES WITH MULTILEVEL INHERITENCE 
+class Parent():
+##CONSTRUCTOR OF PARENT
+    def __init__(self):
+        print("Am Parent init")
+
+    def feature(self):
+        print(" I am parent ")
+
+class Child():
+##CONSTRUCTOR OF CHILD
+     def __init__(self):
+#HERE YOU CAN SEE WE ARE USING SUPER METHOD WITH THE HELP OF WHICH WE CAN INHERIT  CONSTRUCTOR OF PARENT CLASS AND THEN CHILD CLASS         
+        super().__init__() 
+        print("Am Child init")
+        
+     def feature(self):
+         print("I am Child")        
+
+#HERE WE ARE DOING MULIPLE INHERITENCE AND WHEN WE USE SUPER METHOD HERE IT ALSO EXECUTE ONLY PARENT AS WELL AS ITS CLASS CONSTRUCTOR
+#THIS METHOD IS CALLED AS METHOD RESOLTION ORDER
+class Sub_Child(Parent,Child):
+    def __init__(self):
+        super().__init__()
+        print("I am subclass init")
+
+
+#NOW YOU CAN SEE THAT WE CREATE AN OBJECT FOR CHILD AND WHEN WE EXECUTE THAT WE GET ONLY VALUE OF CHILD CONSTRUCTOR.
+s1 =Sub_Child()

@@ -1,0 +1,29 @@
+class Behaviour:
+
+    def __init__(self,behave1,behave2,age1):
+        self.behave1 = behave1
+        self.behave2 = behave2
+        self.age1= age1
+        #self.age2= age2
+
+    def how_behaves(self):
+        print("he is", self.behave1 ,self.behave2)
+        print("he is", self.age1)
+
+    def compare(self,other):
+        if self.age1 == other.age1:
+            return True
+        else:
+            return False        
+
+ram=Behaviour('HAPPY','SAD',20)
+shyam=Behaviour('lovely','sorrow' , 10)
+ram.how_behaves()
+
+shyam.age1 =20
+shyam.behave1 = 'gande'
+if ram.compare(shyam):
+    print("they have same age")
+else:
+    print("then don't have same age")    
+shyam.how_behaves()

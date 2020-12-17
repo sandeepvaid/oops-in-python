@@ -1,0 +1,14 @@
+##SINGLE  LEVEL INHERITENCE
+class Parent:
+    def Feature(self):
+        print("I am parent")
+
+
+##IN BRACKET WE HAVE TO INHERIT CLASS
+class Child(Parent):
+    def Feature1(self):
+        print("I am chid")
+
+c1= Child()
+c1.Feature()
+c1.Feature1()                

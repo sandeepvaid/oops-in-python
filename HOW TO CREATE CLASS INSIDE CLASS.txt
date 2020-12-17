@@ -1,0 +1,32 @@
+class Employee:
+    def __init__(self,name,des,income):
+        self.name = name
+        self.des = des
+        self.income = income
+## 2ND METHOD TO CREATE OBJECT FOR INNER CLASS  AND AFTER CREATING OBJECT IN INNER CLASS WE CALL IT ONLY IN INNER CLASS AS WELL       
+        self.em3 =self.Employee_Per_Info(5,'maruti')
+        ##LIKE THERE WE ARE CALLING METHOD FROM THE OBJECT
+        self.em3.Em_Info()
+
+    def Em_Info(self):
+        print(self.name, self.des , self.income)
+        #self.em3.Em_Info()
+
+##ANOTHER CLASS INSIDE THE CLASS
+    class Employee_Per_Info():
+
+        def __init__(self,mem,vehicle):
+            self.mem = mem
+            self.vehicle = vehicle
+
+        def Em_Info(self):
+            print(self.mem, self.vehicle)    
+
+
+
+##object of Employee class 
+em1 = Employee('rohit' , 'sed' , 40000)
+## 1ST METHOD TO CREATE OBJECT FOR CLASS IN CLASS,WHERE WE FIRST WRITE OUTER CLASS AND THEN WE CAN ACCESS INNER CLASS
+em2=Employee.Employee_Per_Info(4,'mercedes')
+em2.Em_Info()
+em1.Em_Info()

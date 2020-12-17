@@ -1,0 +1,20 @@
+#DUCK TYPING
+class duck1():
+    def analize(self):
+        print("i can swim")
+        print("i can walk")
+
+class duck2():
+    def analize(self):
+        print("i can quake ")
+        print("i am cute" )
+
+class Bird():
+
+    def Analize(self,bird):
+        bird.analize()
+
+bird=duck1()
+bird1 = duck2()
+b1 = Bird()
+b1.Analize(bird1)
